@@ -4,6 +4,7 @@ const UserData = ({ oneUser }) => {
     return (
         <li>
             <h3>{`${oneUser.id} - ${oneUser.first_name} ${oneUser.last_name}`}</h3>
+            <img src={oneUser.avatar} alt={`${oneUser.first_name} ${oneUser.last_name}`} /> <br />
             <a href={`mailto:${oneUser.email}`}>{oneUser.email}</a>
         </li>
     )
