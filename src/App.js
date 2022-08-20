@@ -1,13 +1,16 @@
 import './App.css';
 
 // Importar el componente
-import Saludo from "./components/Saludo";
+import Gretting from "./components/Gretting";
+import Users from "./components/Users";
+
+import USERS_DATA from "./data/users.json";
 
 function App() {
-    const age = 16;
     return (
         <div className="App">
-            {age < 20 ? <Saludo /> : ""}
+            <Gretting text="Trabajando con React" />
+            <Users usersList={USERS_DATA} />
         </div>
     );
 }
