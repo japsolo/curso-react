@@ -1,29 +1,24 @@
-import Button from 'react-bootstrap/Button';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import { Route, Routes } from "react-router-dom";
 
-import './App.css';
+import { Layout } from "./Components/Layout";
 
-// Importar el componente
-import Gretting from "./components/Gretting";
-import Wrapper from "./components/Container";
-import { StyledComponents } from "./components/StyledComponents";
+import { Home } from "./Pages/Home";
+import { AboutUs } from "./Pages/AboutUs";
+import { Products } from "./Pages/Products";
+import { NotFound } from "./Pages/NotFound";
 
 function App() {
     return (
-        <Container>
-            <Row>
-                <Col sm={12} md={6} lg={4}>
-                    <Gretting text="Trabajando con React" />
-                </Col>
-                <Col sm={12} md={6} lg={8}>
-                    <StyledComponents />
-                    <Button variant="warning">Esto es un botón</Button>
-                    <Wrapper />
-                </Col>
-            </Row>
-        </Container>
+        <>
+            <Routes>
+                <Route path="/" element={<Layout />}>
+                    <Route index element={<Home />} />
+                    <Route path="about-us" element={<AboutUs />} />
+                    <Route path="products/*" element={<Products />} />
+                </Route>
+                <Route path="*" element={<NotFound />} />
+            </Routes>
+        </>
     );
 }
 
