@@ -28,11 +28,3 @@
         transform: rotate(360deg);
     }
 }
-
-.testing-title {
-    background-color: salmon;
-    color: white;
-    padding: 1rem;
-    font-size: 2rem;
-    text-align: center;
-}

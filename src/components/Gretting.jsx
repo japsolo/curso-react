@@ -1,9 +1,14 @@
 import PropTypes from "prop-types";
 
 function Gretting({ text, children }) {
+    const titleStyles = {
+        color: "orange",
+        textAlign: "center",
+        fontSize: "40px"
+    }
     return (
         <>
-            <h2 className="title">{text}</h2>
+            <h2 style={titleStyles}>{text}</h2>
             {children}
         </>
     )

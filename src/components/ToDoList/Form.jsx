@@ -2,6 +2,8 @@ import { useState, useContext } from "react";
 
 import { ToDoContext } from "./TodoContext";
 
+import FormStyles from "./Form.module.css"
+
 const Form = () => {
     const { todoHandlers } = useContext(ToDoContext);
     const [inputText, setInputText] = useState("");
@@ -13,8 +15,15 @@ const Form = () => {
     }
 
     return (
-        <form onSubmit={e => submitHandler(e)}>
-            <input type="text" onChange={e => setInputText(e.currentTarget.value)} />
+        <form onSubmit={e => submitHandler(e)} className={FormStyles.outlineBox}>
+            <input
+                type="text"
+                onChange={e => setInputText(e.currentTarget.value)}
+                className={`
+                    ${FormStyles.baseInput}
+                    ${inputText === "" ? FormStyles.emptyInput : FormStyles.fillInput}
+                `}
+            />
             <button type="submit">Agregar</button>
         </form>
     )

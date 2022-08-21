@@ -1,0 +1,17 @@
+.outlineBox {
+    border: solid 1px red;
+    padding: 15px;
+}
+
+.baseInput {
+    outline: none;
+    margin-right: 5px;
+}
+
+.emptyInput {
+    box-shadow: 0 0 5px red;
+}
+
+.fillInput {
+    box-shadow: 0 0 5px green;
+}
