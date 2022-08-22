@@ -5,6 +5,7 @@ import { Layout } from "./Components/Layout";
 import { Home } from "./Pages/Home";
 import { AboutUs } from "./Pages/AboutUs";
 import { Products } from "./Pages/Products";
+import { Cart } from "./Pages/Cart";
 import { NotFound } from "./Pages/NotFound";
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
                     <Route index element={<Home />} />
                     <Route path="about-us" element={<AboutUs />} />
                     <Route path="products/*" element={<Products />} />
+                    <Route path="cart" element={<Cart />} />
                 </Route>
                 <Route path="*" element={<NotFound />} />
             </Routes>
